@@ -3,8 +3,16 @@
 1 liter = 0.264 gallon
 1 kilogram = 2.204 pound
 */
+const inputEl = document.getElementById('unit-input');
+const convertBtn = document.getElementById('convert-btn');
 
-const unit = 20;
+convertBtn.addEventListener('click', function () {
+    const unit = Number(inputEl.value);
+
+    console.log(convertLength(unit));
+    console.log(convertVolume(unit));
+    console.log(convertMass(unit));
+});
 
 function convertLength(value) {
     const FEET_FACTOR = 3.28084;
@@ -15,8 +23,6 @@ function convertLength(value) {
     return `${value} meters = ${meterToFeet} feet | ${value} feet = ${feetToMeter} meters`;
 }
 
-console.log(convertLength(unit));
-
 function convertVolume(value) {
     const GALLON_FACTOR = 0.264172;
 
@@ -26,8 +32,6 @@ function convertVolume(value) {
     return `${value} liters = ${literToGallon} gallons | ${value} gallons = ${gallonToLiter} liters`;
 }
 
-console.log(convertVolume(unit));
-
 function convertMass(value) {
     const POUND_FACTOR = 2.20462;
 
@@ -36,5 +40,3 @@ function convertMass(value) {
 
     return `${value} kilos = ${kgToLbs} pounds | ${value} pounds = ${lbsToKg} kilos`;
 }
-
-console.log(convertMass(unit));
