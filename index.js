@@ -5,17 +5,24 @@
 */
 const convertBtn = document.getElementById('convert-btn');
 const inputEl = document.getElementById('unit-input');
+inputEl.value = 1;
 
 const meterFeetP = document.getElementById('m-ft-result');
 const literGallonP = document.getElementById('l-gallons-result');
 const kgLbsP = document.getElementById('kg-lbs-result');
 
-convertBtn.addEventListener('click', function () {
+function render() {
     const unit = Number(inputEl.value);
 
     meterFeetP.innerHTML = convertLength(unit);
     literGallonP.innerHTML = convertVolume(unit);
     kgLbsP.innerHTML = convertMass(unit);
+}
+
+render();
+
+convertBtn.addEventListener('click', function () {
+    render();
 });
 
 function convertLength(value) {
