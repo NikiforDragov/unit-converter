@@ -3,8 +3,9 @@
 1 liter = 0.264 gallon
 1 kilogram = 2.204 pound
 */
-const inputEl = document.getElementById('unit-input');
 const convertBtn = document.getElementById('convert-btn');
+const inputEl = document.getElementById('unit-input');
+
 const meterFeetP = document.getElementById('m-ft-result');
 const literGallonP = document.getElementById('l-gallons-result');
 const kgLbsP = document.getElementById('kg-lbs-result');
