@@ -1,11 +1,22 @@
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
+    overflow: hidden;
 }
 
 h1 {
     color: white;
     font-weight: 800;
+}
+
+h3 {
+    font-weight: 700;
+    color: #ccc1ff;
+}
+
+p {
+    color: white;
+    font-weight: 200;
 }
 
 #input-container {
@@ -26,6 +37,7 @@ h1 {
     background-color: #6943ff;
     border: 2px #b295ff solid;
     border-radius: 5px;
+    text-align: center;
 }
 
 #convert-btn {
@@ -35,4 +47,21 @@ h1 {
     border: none;
     border-radius: 5px;
     margin-bottom: 30px;
+}
+
+#result-container {
+    background-color: #1f2937;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#m-ft-container,
+#l-gallons-container,
+#kg-lbs-container {
+    background-color: #273549;
+    text-align: center;
+    width: 500px;
 }
